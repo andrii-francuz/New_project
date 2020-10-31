@@ -43,7 +43,7 @@ export default class Header extends Component {
                 </Navbar>
 
                 <Router>
-                    <Switch>
+                    <Switch className="p-0">
                         <Route exact path="/" component={Home} />
                         <Route exact path="/about" component={About} />
                         <Route exact path="/contacts" component={Contacts} />
