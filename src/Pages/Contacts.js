@@ -1,10 +1,33 @@
 import React, { Component } from 'react'
-import { Carousel } from 'react-bootstrap'
+import { Form, Button, Container } from 'react-bootstrap'
 
 export default class Contacts extends Component {
     render() {
         return (
-            <div></div>
+            <Container style={{width: '500px'}}>
+                <h1 className="text-center">Contact us</h1>
+                <Form>
+                    {/* Enter email */}
+                    <Form.Group controlId="formBasicEmail">
+                        <Form.Label>Email address</Form.Label>
+                        <Form.Control type="email" placeholder="Enter email"/>
+                        <Form.Text>
+                            We`ll never share your email with anyone else 
+                        </Form.Text>
+                    </Form.Group>
+                    {/* Text */}
+                    <Form.Group controlId="formBasicPassword">
+                        <Form.Label>Email address</Form.Label>
+                        <Form.Control as="textarea" rows="3"/>
+                    </Form.Group>
+                    {/* Checkbox */}
+                    <Form.Group controlId="formBasicCheckbox">
+                        <Form.Check type="checkbox" label="Check me out"></Form.Check>
+                    </Form.Group>
+
+                    <Button variant="primary" type="submit">Submit</Button>
+                </Form>
+            </Container>
         )
     }
 }
